@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--bs-emphasis-color);
+}
+h2,
+h1 {
+  margin: 0;
+}
+
+button{
+
+  background-color: var(--bs-primary);
+}
+
+@media screen and (min-width: 1000px) {
+  .ulnav {
+    margin-left: 100px !important;
+    li {
+      a{
+        color: var(--bs-emphasis-color);
+      }
+      margin-right: 30px;
+    }
+  }
+  .container {
+    .content {
+      .row {
+        margin-top: 150px !important;
+      }
+    }
+  }
+  .child-pendidikan {
+    margin-right: 10px;
+    display: inline-block;
+    .spendidikan {
+      h6 {
+        margin-top: 5px !important;
+        i {
+          margin-left: 16px !important;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .about{
+    .row{
+      .img{
+        margin-top: 100px;
+       margin-left: 60px;
+      }
+    }
+
+  }
+  // .skill{
+  //   .row{
+  //     margin-top: 150px;
+  //   }
+  // }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .container {
+    .content {
+      .row {
+        margin-top: 100px;
+        text-align: center;
+        .col {
+          img {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    text-align: center;
+  }
+}
+
+.name {
+  font-weight: 700;
+}
+.img {
+  min-width: 300px;
+}
+
+.mode {
+  padding: 5px;
+  // max-width: 100px !important;
+  --bs-dropdown-min-width: 10rem
+  // border-radius: 20px;
+
+  li {
+    max-width: 100px !important;
+    button {
+      // max-width: 100px !important;
+      border-radius: 20px !important;
+    }
+  }
+}
+.container {
+  .content {
+    .row {
+      .col {
+        h1 {
+          font-weight: 600;
+          font-size: 50px;
+        }
+        .icons {
+          span {
+            button {
+              i {
+                font-size: 25px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  .row {
+    margin-top: 150px !important;
+    .col {
+      .container {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+
+.tab {
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 700px;
+  // border: 1px solid #ccc;
+  // background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  // background-color: inherit;
+  // float: left;
+  border: none;
+  outline: none;
+  // cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: var(--bs-emphasis-color);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--bs-primary);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* Style the tab content */
+
+
+#skill{
+  margin-top: 150px;
+  .row{
+   
+    .wd{
+      margin-top: 100px;
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        // border: 1px solid #ccc;
+        border-top: none;
+        max-width: 700px;
+      }
+      // width: 200px !important;
+      img{
+        min-width: 100px;
+        max-width: 120px;
+        min-height: auto;
+        max-height: 120px !important;
+        height: 150px;
+        object-fit: contain;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+#project{
+ 
+  .row{
+    margin-top: 150px;
+
+    .wd{
+      margin-top: 100px;
+      .tabcontents {
+        // flex: auto;
+        align-content: flex-start;
+        display: none;
+        padding: 6px 12px;
+        // border: 1px solid #ccc;
+        border-top: none;
+        max-width: 700px;
+      }
+
+      .card{
+        margin: 10px;
+        display: inline-block;
+        p{
+          margin: 0;
+        }
+        .line{
+          margin-top: 5px;
+          margin-bottom: 5px;
+          img{
+            margin-top: 0;
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+          }
+        }
+      }
+
+      // width: 200px !important;
+    }
+  }
+}
+

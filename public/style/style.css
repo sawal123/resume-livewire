@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--bs-emphasis-color);
+}
+
+h2,
+h1 {
+  margin: 0;
+}
+
+button {
+  background-color: var(--bs-primary);
+}
+
+@media screen and (min-width: 1000px) {
+  .ulnav {
+    margin-left: 100px !important;
+  }
+  .ulnav li {
+    margin-right: 30px;
+  }
+  .ulnav li a {
+    color: var(--bs-emphasis-color);
+  }
+  .container .content .row {
+    margin-top: 150px !important;
+  }
+  .child-pendidikan {
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .child-pendidikan .spendidikan h6 {
+    margin-top: 5px !important;
+  }
+  .child-pendidikan .spendidikan h6 i {
+    margin-left: 16px !important;
+    margin-right: 5px;
+  }
+  .about .row .img {
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container .content .row {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .container .content .row .col img {
+    margin-top: 30px;
+  }
+  .about {
+    text-align: center;
+  }
+}
+.name {
+  font-weight: 700;
+}
+
+.img {
+  min-width: 300px;
+}
+
+.mode {
+  padding: 5px;
+  --bs-dropdown-min-width: 10rem
+  // border-radius: 20px;
+}
+.mode li {
+  max-width: 100px !important;
+}
+.mode li button {
+  border-radius: 20px !important;
+}
+
+.container .content .row .col h1 {
+  font-weight: 600;
+  font-size: 50px;
+}
+.container .content .row .col .icons span button i {
+  font-size: 25px !important;
+}
+
+.about .row {
+  margin-top: 150px !important;
+}
+.about .row .col .container {
+  margin-top: 100px;
+}
+
+.tab {
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: var(--bs-emphasis-color);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--bs-primary);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* Style the tab content */
+#skill {
+  margin-top: 150px;
+}
+#skill .row .wd {
+  margin-top: 100px;
+}
+#skill .row .wd .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  max-width: 700px;
+}
+#skill .row .wd img {
+  min-width: 100px;
+  max-width: 120px;
+  min-height: auto;
+  max-height: 120px !important;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 10px;
+}
+
+#project .row {
+  margin-top: 150px;
+}
+#project .row .wd {
+  margin-top: 100px;
+}
+#project .row .wd .tabcontents {
+  align-content: flex-start;
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  max-width: 700px;
+}
+#project .row .wd .card {
+  margin: 10px;
+  display: inline-block;
+}
+#project .row .wd .card p {
+  margin: 0;
+}
+#project .row .wd .card .line {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#project .row .wd .card .line img {
+  margin-top: 0;
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */
