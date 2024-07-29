@@ -16,6 +16,7 @@ class WelcomeController extends Controller
 
         $sMulti = Tool::where('category', 'multimedia')->get();
         $sPro = Tool::where('category', 'programmer')->get();
+
         // dd($sMulti);
         // dd($projects);
 

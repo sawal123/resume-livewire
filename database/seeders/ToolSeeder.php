@@ -85,31 +85,31 @@ class ToolSeeder extends Seeder
               [
                   'uuid'=>Str::uuid(),
                   'name' => 'Blender',
-                  'category'=>'mulitmedia',
+                  'category'=>'multimedia',
                   'icon' => 'blender.svg'
               ],
               [
                   'uuid'=>Str::uuid(),
                   'name' => 'Photoshop',
-                  'category'=>'mulitmedia',
+                  'category'=>'multimedia',
                   'icon' => 'photoshop.svg'
               ],
               [
                   'uuid'=>Str::uuid(),
                   'name' => 'Adobe Premiere Pro',
-                  'category'=>'mulitmedia',
+                  'category'=>'multimedia',
                   'icon' => 'adobe premiere pro.svg'
               ],
               [
                   'uuid'=>Str::uuid(),
                   'name' => 'After Effect',
-                  'category'=>'mulitmedia',
+                  'category'=>'multimedia',
                   'icon' => 'after effect.svg'
               ],
               [
                   'uuid'=>Str::uuid(),
                   'name' => 'Canvaa',
-                  'category'=>'mulitmedia',
+                  'category'=>'multimedia',
                   'icon' => 'canva.svg'
               ],
             ]
