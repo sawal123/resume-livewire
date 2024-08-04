@@ -15,6 +15,9 @@ class Pengalaman extends Component
     public $end = '';
     public $disabled = '';
 
+    public $titleModal = '';
+    public $submitModal = '';
+
 
     public $delModal = false;
     public $uuid;
@@ -40,16 +43,17 @@ class Pengalaman extends Component
     }
 
 
-   
-
     public function openModal()
     {
         $this->modal = true;
+        $this->titleModal = 'Tambah Data Pengalaman';
+        $this->submitModal = 'save';
         // dd('tes');
     }
     public function closeModal()
     {
         $this->modal = false;
+        $this->res();
     }
 
     public function save()
@@ -58,7 +62,6 @@ class Pengalaman extends Component
             'name' => 'string|required|max:255',
             'posisi' => 'string'
         ]);
-
         $ex = new ModelsPengalaman();
 
         $ex->perusahaan = $this->name;
@@ -80,8 +83,51 @@ class Pengalaman extends Component
     }
 
 
+    public $uPro;
+    public $ePro;
+    public function editModal($uuid)
+    {
+        $this->uPro = $uuid;
+        $this->titleModal = 'Edit Data Pengalaman';
+        $this->submitModal = 'edit';
+        $this->modal = true;
+        $this->ePro = ModelsPengalaman::where('id', $uuid)->firstOrFail();
+        $this->name =  $this->ePro->perusahaan;
+        $this->posisi =  $this->ePro->job;
+        $this->start =  $this->ePro->start;
+        // $this->end =  $this->ePro->end;
+        if($this->ePro->end === 'Sekarang'){
+            $this->check =true;
+            // dd($this->check);
+        }else{
+            $this->end = $this->ePro->end;
+        }
+        // dd($this->check);
+    }
+
+    public function edit()
+    {
+        // $this->open = true;
+        $this->uPro;
+        $e = ModelsPengalaman::where('id', $this->uPro)->firstOrFail();
+        $e->perusahaan = $this->name;
+        $e->job = $this->posisi;
+        $e->start = $this->start;
+        $e->end = $this->end === '' ? 'Sekarang' : $this->end;
+
+        session()->flash('message', 'Experience successfully Update.');
+        $e->save();
+
+        $this->closeModal();
+    }
+
     public function render()
     {
+        if($this->end !== ''){
+            if($this->check===true){
+                $this->end = '';
+            }
+        }
         $experience = ModelsPengalaman::all();
         return view('livewire.experience.pengalaman', compact([
             'experience'

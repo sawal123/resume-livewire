@@ -1,9 +1,11 @@
 <div>
     @include('components.style-table')
+    
+    <x-button-primary type='button' value='+ Tambah Data' wire:click.prevent='openModal' />
+    <div class="h-2"></div>
     @if (session()->has('message'))
         <x-alert-primary message="{{ session('message') }}" />
     @endif
-    <x-button-primary type='button' value='+ Tambah Data' wire:click.prevent='openModal' />
 
     <table class="responstable">
         <thead>

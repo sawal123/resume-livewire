@@ -39,6 +39,16 @@ new class extends Component
                         {{ __('Experience') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('pendidikan')" :active="request()->routeIs('pendidikan')" wire:navigate>
+                        {{ __('Pendidikan') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('dokumen')" :active="request()->routeIs('dokumen')" wire:navigate>
+                        {{ __('Image & Document') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

@@ -1,6 +1,6 @@
 <div>
     <x-button-primary type='button' value='+ Tambah Data' wire:click.prevent='openModal' />
-    {{-- {{ $tes }} --}}
+    <div class="h-2"></div>
     @if (session()->has('message'))
         <x-alert-primary message="{{ session('message') }}" />
     @endif
@@ -23,7 +23,7 @@
                     <td>{{ $ex->start }}</td>
                     <td>{{ $ex->end }}</td>
                     <td>
-                        <x-button-primary type="button" wire:click.prevent="editModal('')" value='Edit' />
+                        <x-button-primary type="button" wire:click.prevent="editModal('{{ $ex->id }}')" value='Edit' />
                         <x-danger-button type="button" value='Delete' wire:click.prevent="confirmDelete('{{$ex->id}}')" />
 
                     </td>
@@ -52,14 +52,15 @@
         <x-modal show=1 name='Add Experience'>
             <div class="p-5">
                 <div class="title my-4">
-                    <h4 class="font-bold text-2xl">Tambah Experience</h4>
+                    <h4 class="font-bold text-2xl">{{ $titleModal }}</h4>
                 </div>
                 <hr>
-                <form wire:submit='save'>
+                <form wire:submit='{{ $submitModal }}'>
                     <div class="text-start my-4">
                         @php
-                            if ($this->check) {
+                            if ($this->check === true) {
                                 $disabled = 'disabled';
+                                
                             }
                         @endphp
                         <x-text-input wire:model.live='name' class="w-full my-2" placeholder='Nama Perusahaan...' />
