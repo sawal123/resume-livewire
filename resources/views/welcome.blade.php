@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hi, Nama saya Sawalinto Saya bekerja sebagai Design Graphic di salah satu perusahaan di kota Medan dan juga Freelancer Web Developer.">
+    <meta name="keywords" content="CV Sawalinto, Sawalinto">
+
     <title>Sawalinto</title>
     <link rel="shortcut icon" href="image/poto1.png">
     <link rel="stylesheet" href="{{asset('node_modules/bootstrap/dist/css/bootstrap.min.css')}}">
