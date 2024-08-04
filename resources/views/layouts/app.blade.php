@@ -14,7 +14,8 @@
         https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css
         " rel="stylesheet">
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        <link rel="stylesheet" href="{{ asset('build/assets/app-IXNHm6po.css') }}">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -34,7 +35,7 @@
                 {{ $slot }}
             </main>
         </div>
-        
+        <script src="{{ asset('build/assets/app-C1-XIpUa.js') }}"></script>
 
         
         
